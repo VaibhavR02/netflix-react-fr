@@ -13,6 +13,7 @@ function App() {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
   };
+
   return (
     <>
       <Router>
