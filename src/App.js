@@ -5,12 +5,18 @@ import Header from './Components/Header/Header';
 import Player from './Components/Player/Player';
 import Footer from './Components/Footer/Footer';
 import { Toaster } from 'react-hot-toast';
+import { useState } from 'react';
 
 function App() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset === 0 ? false : true);
+    return () => (window.onscroll = null);
+  };
   return (
     <>
       <Router>
-        <Header />
+        <Header isScrolled={isScrolled} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/player" element={<Player />} />

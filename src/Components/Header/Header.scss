@@ -1,8 +1,22 @@
 $bg: rgb(16, 16, 16);
 
+.scrolled {
+  background-color: black;
+}
+
 .header {
-  height: 55px;
-  background-color: $bg;
+  position: sticky;
+  top: 0;
+  height: 4rem;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  padding: 0 4rem;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -23,7 +37,7 @@ $bg: rgb(16, 16, 16);
     > a {
       margin: 1vmax;
       font-size: 1.3rem;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
 

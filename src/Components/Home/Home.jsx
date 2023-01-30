@@ -36,6 +36,7 @@ const Row = ({ title, arr = [] }) => (
 
 const Home = () => {
   const navigate = useNavigate();
+
   const [upcomingMovies, SetUpcomingMovies] = useState([]);
   const [nowPlayingMovies, SetUpNowPlayingMovies] = useState([]);
   const [topRatedMovies, SetTopRatedMovies] = useState([]);
@@ -90,14 +91,7 @@ const Home = () => {
 
   return (
     <section className="home">
-      <div
-        className="banner"
-        // style={{
-        //   backgroundImage: populerMovies[0]
-        //     ? `url(${`${imgUrl}/${populerMovies[0].poster_path}`})`
-        //     : 'rgb(16, 16, 16)',
-        // }}
-      >
+      <div className="banner">
         <h1>STRANGER THINGS</h1>
         <p>
           When a young boy vanishes, a small town uncovers a mystery involving
@@ -105,8 +99,6 @@ const Home = () => {
           little girl. Starring:Winona Ryder,David Harbour,Millie Bobby Brown
           Creators:The Duffer Brothers
         </p>
-        {/* {populerMovies[0] && <h1>{populerMovies[0].original_title}</h1>}
-        {populerMovies[0] && <p>{populerMovies[0].overview}</p>} */}
         <div>
           <button onClick={() => navigate('/Player')}>
             <BiPlay />

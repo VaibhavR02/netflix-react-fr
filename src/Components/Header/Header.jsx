@@ -4,11 +4,11 @@ import logo from '../../logo.png';
 import './Header.scss';
 import { ImSearch } from 'react-icons/im';
 
-const Header = () => {
+const Header = ({ isScrolled }) => {
   const navigate = useNavigate();
 
   return (
-    <nav className="header">
+    <nav className={`${isScrolled ? 'scrolled' : ''} header`}>
       <img onClick={() => navigate('/')} src={logo} alt="logo" />
       <div>
         <Link to={'/'}>TV Shows</Link>
