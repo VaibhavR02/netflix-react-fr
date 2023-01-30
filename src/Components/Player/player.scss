@@ -1,12 +1,13 @@
 .player {
   width: 100vw;
-  height: 100vh;
+  height: 92vh;
   .back {
     position: absolute;
     padding: 2rem;
     z-index: 1;
     svg {
-      font-size: 3rem;
+      color: white;
+      font-size: 2rem;
       cursor: pointer;
     }
   }

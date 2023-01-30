@@ -12,7 +12,7 @@ export default function Player() {
         <div className="back">
           <BsArrowLeft onClick={() => navigate(-1)} />
         </div>
-        <video src={video} autoPlay loop controls unmuted />
+        <video src={video} loop controls unmuted />
       </div>
     </div>
   );
