@@ -6,6 +6,7 @@ import { BiPlay } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { toast } from 'react-hot-toast';
 
 const apiKey = '7952a001d275bd6cf522f9259c1d9d9e';
 const url = 'https://api.themoviedb.org/3';
@@ -82,6 +83,11 @@ const Home = () => {
     fetchUpopular();
   });
 
+  const addedToList = (e) => {
+    e.preventDefault();
+    toast.success('Added');
+  };
+
   return (
     <section className="home">
       <div
@@ -106,7 +112,7 @@ const Home = () => {
             <BiPlay />
             Play
           </button>
-          <button>
+          <button onClick={addedToList}>
             My List
             <AiOutlinePlus />
           </button>

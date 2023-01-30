@@ -6,6 +6,7 @@ import { ImSearch } from 'react-icons/im';
 
 const Header = () => {
   const navigate = useNavigate();
+
   return (
     <nav className="header">
       <img onClick={() => navigate('/')} src={logo} alt="logo" />
